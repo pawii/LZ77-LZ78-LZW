@@ -31,7 +31,7 @@ namespace WPF.LZ78
         {
             currentString.RemainingMessage = sourceMessage.Substring(currentIteration, sourceMessage.Length - currentIteration);
 
-            if (dict.ContainsKey(buffer + sourceMessage[currentIteration]))
+            if (dict.ContainsKey(buffer + sourceMessage[currentIteration]) && currentIteration != sourceMessage.Length - 1)
             {
                 currentString.SetNullCode();
                 currentString.FoundPrefix = string.Empty;

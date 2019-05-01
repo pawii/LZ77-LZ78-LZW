@@ -5,14 +5,14 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WPF"
         mc:Ignorable="d"
-        Title="LZ78_Window" Height="450" Width="800">
+        Title="LZ78_Window" Height="450" Width="760">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="0.4*"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="0.45*"/>
+            <ColumnDefinition Width="0.5*"/>
             <ColumnDefinition Width="0.18*"/>
             <ColumnDefinition Width="0.45*"/>
         </Grid.ColumnDefinitions>
@@ -43,13 +43,11 @@
 
         <ScrollViewer Grid.Row="1" Grid.Column="2">
             <StackPanel x:Name="decompressContainer" Grid.Row="1" Grid.Column="2">
-            <WrapPanel Orientation="Horizontal">
-                    <TextBox Width="90" TextAlignment="Center">Bits</TextBox>
-                    <TextBox Width="60" TextAlignment="Center">Code</TextBox>
-                    <TextBox Width="70" TextAlignment="Center">On exit</TextBox>
-                    <TextBox Width="80" TextAlignment="Center">Full note</TextBox>
-                    <TextBox Width="80" TextAlignment="Center">Partial note</TextBox>
-            </WrapPanel>
+                <WrapPanel Orientation="Horizontal">
+                    <TextBox Width="120" TextAlignment="Center">Dictionary</TextBox>
+                    <TextBox Width="120" TextAlignment="Center">Remaining Message</TextBox>
+                    <TextBox Width="35" TextAlignment="Center">Code</TextBox>
+                </WrapPanel>
             </StackPanel>
         </ScrollViewer>
     </Grid>

@@ -27,7 +27,8 @@ namespace WPF.LZ78
             var result = coder.IsEnd ? null : coder.CoderIteration();
             if (result != null)
             {
-                compressedResult.Add(new Node(){ next = result.next, pos = result.pos});
+                if (!string.IsNullOrEmpty(result.Code))
+                    compressedResult.Add(new Node(){ next = result.next, pos = result.pos});
             }
             return result;
         }
@@ -43,7 +44,8 @@ namespace WPF.LZ78
             while (!coder.IsEnd)
             {
                 var newStr = coder.CoderIteration();
-                compressedResult.Add(new Node() { next = newStr.next, pos = newStr.pos });
+                if (!string.IsNullOrEmpty(newStr.Code))
+                    compressedResult.Add(new Node() { next = newStr.next, pos = newStr.pos });
                 result.Add(newStr);
             }
             return result;
@@ -61,7 +63,10 @@ namespace WPF.LZ78
         public LZ78_Coding_String GetDecodingString()
         {
             var result = compressedResult.Count == 0 ? null : decoder.DecoderIteration(compressedResult[0].pos, compressedResult[0].next);
-            compressedResult.RemoveAt(0);
+           // do
+           // {
+                compressedResult.RemoveAt(0);
+           // } while (compressedResult.Count > 1 && string.IsNullOrEmpty(compressedResult[0].next.ToString()));
 
             return result;
         }

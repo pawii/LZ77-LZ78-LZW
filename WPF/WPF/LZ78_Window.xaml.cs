@@ -48,21 +48,11 @@ namespace WPF
             Code.Text = data.Code.ToString();
             Code.Width = 35;
             Code.TextAlignment = TextAlignment.Center;
-            //TextBox bits = new TextBox();
-            //bits.Width = 50;
-            //bits.TextAlignment = TextAlignment.Center;
-            //bits.Text = data.Bytes;
-            //TextBox dictionary = new TextBox();
-            //dictionary.Width = 70;
-            //dictionary.TextAlignment = TextAlignment.Center;
-            //dictionary.Text = data.Dictionary;
 
             wp.Children.Add(dictionary);
             wp.Children.Add(remainingMessage);
             wp.Children.Add(Prefix);
             wp.Children.Add(Code);
-            //wp.Children.Add(bits);
-            //wp.Children.Add(dictionary);
 
             compressContainer.Children.Add(wp);
         }
@@ -80,33 +70,18 @@ namespace WPF
             remainingMessage.Text = data.RemainingMessage.ToString();
             remainingMessage.Width = 120;
             remainingMessage.TextAlignment = TextAlignment.Center;
-            TextBox Prefix = new TextBox();
-            Prefix.Text = data.FoundPrefix;
-            Prefix.Width = 35;
-            Prefix.TextAlignment = TextAlignment.Center;
             TextBox Code = new TextBox();
             Code.Text = data.Code.ToString();
             Code.Width = 35;
             Code.TextAlignment = TextAlignment.Center;
-            //TextBox bits = new TextBox();
-            //bits.Width = 50;
-            //bits.TextAlignment = TextAlignment.Center;
-            //bits.Text = data.Bytes;
-            //TextBox dictionary = new TextBox();
-            //dictionary.Width = 70;
-            //dictionary.TextAlignment = TextAlignment.Center;
-            //dictionary.Text = data.Dictionary;
 
             wp.Children.Add(dictionary);
             wp.Children.Add(remainingMessage);
-            wp.Children.Add(Prefix);
             wp.Children.Add(Code);
-            //wp.Children.Add(bits);
-            //wp.Children.Add(dictionary);
 
             decompressContainer.Children.Add(wp);
 
-            outputTB.Text += data.RemainingMessage;
+            outputTB.Text = data.RemainingMessage;
         }
 
         private void StartCmprBtn_Click(object sender, RoutedEventArgs e)
