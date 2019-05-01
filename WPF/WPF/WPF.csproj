@@ -56,6 +56,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="LZ78_Window.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="LZW_Window.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -73,6 +77,12 @@
     <Compile Include="GArray.cs" />
     <Compile Include="LZ77.cs" />
     <Compile Include="LZ78.cs" />
+    <Compile Include="LZ78\LZ78_Coder.cs" />
+    <Compile Include="LZ78\LZ78_Controller.cs" />
+    <Compile Include="LZ78\LZ78_Decoder.cs" />
+    <Compile Include="LZ78_Window.xaml.cs">
+      <DependentUpon>LZ78_Window.xaml</DependentUpon>
+    </Compile>
     <Compile Include="LZW\LZW.cs" />
     <Compile Include="LZW\LZW_Coder.cs" />
     <Compile Include="LZW\LZW_Decoder.cs" />

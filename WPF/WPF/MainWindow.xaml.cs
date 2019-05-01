@@ -62,5 +62,11 @@ namespace WPF
             var wind = new LZW_Window();
             wind.Show();
         }
+
+        private void Lz78Btn_Click(object sender, RoutedEventArgs e)
+        {
+            var wind = new LZ78_Window();
+            wind.Show();
+        }
     }
 }

@@ -20,7 +20,7 @@
         <TextBox x:Name="sourseTextTB"/>
         <TextBlock Grid.Column="1" x:Name="archiveTextTB"/>
         <StackPanel Grid.Column="2" VerticalAlignment="Center">
-            <Button Grid.Column="2" FontSize="40" x:Name="archiveBtn" Click="ArchiveBtn_Click">Заархивировать</Button>
+            <Button Grid.Column="2" FontSize="40" x:Name="lz78Btn" Click="Lz78Btn_Click">LZ78</Button>
             <Button Grid.Column="2" FontSize="40" x:Name="unarchiveBtn" Click="UnarchiveBtn_Click">Разархивировать</Button>
             <Button Grid.Column="2" FontSize="40" x:Name="lzwBtn" Click="LzwBtn_Click">LZW</Button>
         </StackPanel>
