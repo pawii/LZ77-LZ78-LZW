@@ -16,10 +16,10 @@
             <ColumnDefinition Width="0.18*"/>
             <ColumnDefinition Width="0.45*"/>
         </Grid.ColumnDefinitions>
-        
-        <TextBox x:Name="sourceTB">Enter message</TextBox>
 
-        <TextBlock x:Name="outputTB" Grid.Row="0" Grid.Column="2"></TextBlock>
+        <TextBox x:Name="sourceTB" TextWrapping="Wrap">Enter message</TextBox>
+
+        <TextBlock TextWrapping="Wrap" x:Name="outputTB" Grid.Row="0" Grid.Column="2"></TextBlock>
         
         <StackPanel Grid.Row="1" Grid.Column="1">
             <Button x:Name="startCmprBtn" FontSize="15" Click="StartCmprBtn_Click">Start compress</Button>

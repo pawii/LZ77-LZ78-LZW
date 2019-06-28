@@ -56,6 +56,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="LZ77_Window.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="LZ78_Window.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -72,11 +76,12 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Converter.cs" />
-    <Compile Include="ExtensionMethods.cs" />
-    <Compile Include="GArray.cs" />
-    <Compile Include="LZ77.cs" />
-    <Compile Include="LZ78.cs" />
+    <Compile Include="LZ77\LZ77_Coder.cs" />
+    <Compile Include="LZ77\LZ77_Controller.cs" />
+    <Compile Include="LZ77\LZ77_Decoder.cs" />
+    <Compile Include="LZ77_Window.xaml.cs">
+      <DependentUpon>LZ77_Window.xaml</DependentUpon>
+    </Compile>
     <Compile Include="LZ78\LZ78_Coder.cs" />
     <Compile Include="LZ78\LZ78_Controller.cs" />
     <Compile Include="LZ78\LZ78_Decoder.cs" />
@@ -120,5 +125,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

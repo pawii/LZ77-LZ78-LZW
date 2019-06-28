@@ -27,45 +27,24 @@ namespace WPF
             InitializeComponent();
         }
 
-        private void ArchiveBtn_Click(object sender, RoutedEventArgs e)
-        {
-            archiveBytes = LZ77.Lz77Compress(sourseTextTB.Text.GetBytes());
-            var unarchiveBytesString = sourseTextTB.Text.GetBytes().ToBinaryString();
-            var archiveBytesString = archiveBytes.ToBinaryString();
-            archiveTextTB.Text = "Unarchive bytes: \n" + FormatString(unarchiveBytesString) + 
-                "\nArchive bytes: \n" + FormatString(archiveBytesString);
-        }
-
         private void UnarchiveBtn_Click(object sender, RoutedEventArgs e)
         {
-            sourseTextTB.Text = LZ77.Lz77Decompress(archiveBytes).ToSingleString();
-        }
-
-        private string FormatString(string source)
-        {
-            StringBuilder result = new StringBuilder(source.Length);
-
-            for (int i = 0; i < source.Length; i++)
-            {
-                result.Append(source[i]);
-                if (i % 40 == 39)
-                {
-                    result.Append('\n');
-                }
-            }
-
-            return result.ToString();
+            ShowWindow<LZ77_Window>();
         }
 
         private void LzwBtn_Click(object sender, RoutedEventArgs e)
         {
-            var wind = new LZW_Window();
-            wind.Show();
+            ShowWindow<LZW_Window>();
         }
 
         private void Lz78Btn_Click(object sender, RoutedEventArgs e)
         {
-            var wind = new LZ78_Window();
+            ShowWindow<LZ78_Window>();
+        }
+
+        private void ShowWindow<T>() where T : Window, new()
+        {
+            var wind = new T();
             wind.Show();
         }
     }

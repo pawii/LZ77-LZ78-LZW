@@ -34,3 +34,5 @@ C:\Users\pawii\Desktop\Learning\6 semestr\Защита курсач\LZ77-LZ78-LZ
 C:\Users\pawii\Desktop\Learning\6 semestr\Защита курсач\LZ77-LZ78-LZW\WPF\WPF\obj\Debug\WPF.Properties.Resources.resources
 C:\Users\pawii\Desktop\Learning\6 semestr\Защита курсач\LZ77-LZ78-LZW\WPF\WPF\obj\Debug\WPF.csproj.GenerateResource.cache
 C:\Users\pawii\Desktop\Learning\6 semestr\Защита курсач\LZ77-LZ78-LZW\WPF\WPF\obj\Debug\WPF.csproj.CoreCompileInputs.cache
+C:\Users\pawii\Desktop\Learning\6 semestr\Защита курсач\LZ77-LZ78-LZW\WPF\WPF\obj\Debug\LZ77_Window.g.cs
+C:\Users\pawii\Desktop\Learning\6 semestr\Защита курсач\LZ77-LZ78-LZW\WPF\WPF\obj\Debug\LZ77_Window.baml
